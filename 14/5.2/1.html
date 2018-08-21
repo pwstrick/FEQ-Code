@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>14-5.2</title>
+</head>
+<body>
+	<dl id="numbers">
+	  <dd>1</dd>
+	  <dd>2</dd>
+	  <dd id="third">3</dd>
+	</dl>
+	<script>
+		var dd = document.createElement("dd"),
+		  dl = document.getElementById("numbers"),
+		  third = document.getElementById("third");
+		dd.innerHTML = 4;
+		dl.insertBefore(dd, third);
+	</script>
+</body>
+</html>

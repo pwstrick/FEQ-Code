@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>8-5.1</title>
+	<style>
+		div {
+		  width: 200px;
+		  overflow: hidden; 		/* 裁剪溢出内容 */
+		  text-overflow: ellipsis; 	/* 将溢出内容替换为省略号 */
+		  /* 旧版本伸缩属性 */
+		  display: -webkit-box;
+		  -webkit-box-orient: vertical; /* 从上到下排列 */
+		  /* webkit私有属性 */
+		  -webkit-line-clamp: 1; 		/*文本行数*/
+		  border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<div>内容溢出内容溢出内容溢出内容溢出内容溢出内容溢出内容溢出</div>
+</body>
+</html>

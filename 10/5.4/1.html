@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>10-5.4</title>
+</head>
+<body>
+	<script>
+		function getArray() {
+			var arr = [],
+					number;
+			for(var i=0; i<8; i++) {
+				//随机一个在0到15之间的数，再对小数部分做四舍五入，
+				number = Math.round(Math.random() * 15);
+				number += 5;			//与5相加，得到符合范围的数
+				if(arr.indexOf(number) >= 0) {//重复就将i变量减1
+					i--;
+				}else {//不重复就插入到数组中
+					arr.push(number);
+				}
+			}
+			return arr;
+		}
+		console.log(getArray());
+		console.log(getArray());
+		console.log(getArray());
+		console.log(getArray());
+	</script>
+</body>
+</html>

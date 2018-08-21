@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>4-5.3</title>
+</head>
+<body>
+	<script>
+		function isInheritProperty(obj, name) {
+		  return name in obj && !obj.hasOwnProperty(name);
+		}
+		var obj1 = { name: "strick" };
+		var obj2 = Object.create(obj1);
+		var result = isInheritProperty(obj2, "name");
+		console.log(result);
+	</script>
+</body>
+</html>

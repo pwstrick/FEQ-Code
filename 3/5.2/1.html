@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>3-5.2</title>
+</head>
+<body>
+	<script>
+		function accMul(arg1, arg2) {
+		  var m = 0,
+			s1 = arg1.toString(),
+			s2 = arg2.toString();
+		  m += s1.split(".")[1].length; //第一个小数的位数
+		  m += s2.split(".")[1].length; //第二个小数的位数
+		  var result = Number(s1.replace(".", "")) * Number(s2.replace(".", "")); //两个整数相乘
+		  result /= Math.pow(10, m); 	//小数点往左移动指定位数
+		  return result;
+		}
+		console.log(accMul(33.98, 0.1));
+	</script>
+</body>
+</html>

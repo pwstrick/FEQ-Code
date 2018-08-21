@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>12-5.3</title>
+</head>
+<body>
+	<script>
+		function prime(number) {
+		  if (!prime.digits) {
+			prime.digits = {}; 	//缓存对象
+		  }
+		  if (prime.digits[number] !== undefined) {
+			return prime.digits[number];
+		  }
+		  var isPrime = false;
+		  for (var i = 2; i < number; i++) {
+			if (number % i == 0) {
+			  isPrime = false;
+			  break;
+			}
+		  }
+		  if (i == number) {
+			isPrime = true;
+		  }
+		  return (prime.digits[number] = isPrime);
+		}
+		console.log(prime(17));
+		console.log(prime(100));
+	</script>
+</body>
+</html>

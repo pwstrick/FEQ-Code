@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>10-3.4</title>
+</head>
+<body>
+	<script>
+		var obj1 = { age: 10 },
+				obj2 = obj1;
+		obj1.name = obj2 = { age: 20 };
+		console.log(obj1);
+		console.log(obj1.name);
+	</script>
+</body>
+</html>

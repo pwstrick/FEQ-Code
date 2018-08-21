@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>19-3.4</title>
+</head>
+<body>
+	<script>
+		var a = 1;
+		function outer() {
+		  console.log(a);
+		}
+		(function(func) {
+		  var a = 2;
+		  func();
+		})(outer);
+	</script>
+</body>
+</html>

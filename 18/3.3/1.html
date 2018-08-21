@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>18-3.3</title>
+</head>
+<body>
+	<script>
+		function child() {}
+		function ancestor() {}
+		child.prototype = ancestor;
+		var obj = new child();
+		console.log(ancestor.isPrototypeOf(obj));
+		console.log(obj instanceof ancestor);
+	</script>
+</body>
+</html>

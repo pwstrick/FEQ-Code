@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>16-3.3</title>
+</head>
+<body>
+	<script>
+		var name = "freedom";	//全局变量
+		var obj = {
+		  name: "justice",
+		  getName: function() {
+			return this.name;
+		  }
+		};
+		function parentName(fn) {
+		  return fn();
+		}
+		console.log(parentName(obj.getName));
+	</script>
+</body>
+</html>

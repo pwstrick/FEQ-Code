@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>20-5.1</title>
+</head>
+<body>
+	<select id="names">
+	  <option value="1">strick</option>
+	  <option value="2">freedom</option>
+	  <option value="3">jane</option>
+	  <option value="4">ping</option>
+	</select>
+	<script>
+		var names = document.getElementById("names");
+		//names.options.length = 0;						//方式一
+		//names.removeChild(names.firstElementChild);		//方式二
+		//names.remove(0);								//方式三
+		//names.options[0] = null;						//方式四
+	</script>
+</body>
+</html>

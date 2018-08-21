@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>17-5.3</title>
+</head>
+<body>
+	<button type="submit" id="btn">提交</button>
+	<script>
+		function addHandler(element, type, handler) {
+			if (element.addEventListener) {
+				element.addEventListener(type, handler, false);
+			}else if (element.attachEvent) {
+				element.attachEvent('on' + type, handler);
+			}else {
+				element['on' + type] = handler;
+			}
+		}
+	</script>
+</body>
+</html>

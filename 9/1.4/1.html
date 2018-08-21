@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>9-1.4</title>
+</head>
+<body>
+	<script>
+		var a = 1;
+		var func = (function() {
+			var a = 2;
+			return function() {
+				a++;
+				console.log(a);
+			};
+		})();
+		func();
+		func();
+	</script>
+</body>
+</html>

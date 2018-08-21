@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>2-5.4</title>
+</head>
+<body>
+	<script>
+		function add() {
+			var tmpSlice = [].slice,
+				params = tmpSlice.apply(arguments);
+			function currying() {
+				var arr = tmpSlice.apply(arguments);
+				params = params.concat(arr);	//合并参数
+				return currying;
+			}
+			currying.toString = function() {
+				var result = 0;
+				params.forEach(function(value) {
+					result += value;			//将所有参数相加
+				});
+				return result;
+			};
+			return currying;
+		}
+		
+		console.log(add(1, 2));		//3
+		console.log(add(1, 2, 3));	//6
+		console.log(add(1)(2));		//3
+		console.log(add(1)(2)(3));	//6
+	</script>
+</body>
+</html>

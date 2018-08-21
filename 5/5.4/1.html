@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>5-5.4</title>
+</head>
+<body>
+	<script>
+		function shuffle(arr) {
+			var length = arr.length,
+					temp, index;
+			for(var i = length-1; i >= 0; i--) {
+				index = Math.floor(Math.random() * i);	//向下取整
+				temp = arr[index];		//取出随机到的元素
+				arr[index] = arr[i];	//将最后面的元素放到随机到的位置
+				arr[i] = temp;			//将随机到的元素插到最后面
+			}
+			return arr;
+		}
+		console.log(shuffle([1,2,3,4,5,6]));
+		console.log(shuffle([1,2,3,4,5,6]));
+		console.log(shuffle([1,2,3,4,5,6]));
+		console.log(shuffle([1,2,3,4,5,6]));
+	</script>
+</body>
+</html>

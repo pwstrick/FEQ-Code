@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>16-5.1</title>
+</head>
+<body>
+	<div style="border:1px solid #000">
+		<span id="container">内容</span>
+	</div>
+	<script>
+		function offsetSum(node) {
+		  var top = 0, left = 0;
+		  while (node) {
+			top += node.offsetTop;
+			left += node.offsetLeft;
+			node = node.offsetParent;
+			if (node) {
+			  top += node.clientTop; 	//上边框的宽度
+			  left += node.clientLeft; 	//左边框的宽度
+			}
+		  }
+		  return { top: top, left: left };
+		}
+		console.log(offsetSum(document.getElementById("container")));
+	</script>
+</body>
+</html>

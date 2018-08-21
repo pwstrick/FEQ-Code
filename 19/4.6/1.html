@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>19-4.6</title>
+</head>
+<body>
+	<script>
+		var fragment = document.createDocumentFragment(),
+		  p;
+		for (var i = 0; i < 10; i++) {
+		  p = document.createElement("p");
+		  p.innerHTML = i;
+		  p.style.width = "100px";
+		  fragment.appendChild(p);
+		}
+		document.body.appendChild(fragment);
+	</script>
+</body>
+</html>

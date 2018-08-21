@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>7-5.3</title>
+</head>
+<body>
+	<script>
+		function strFormat(format, args) {
+		  if (arguments.length < 2) {
+			return format;
+		  }
+		  for (var key in args) {
+			var value = args[key];
+			if (undefined != value) {
+			  format = format.replace(new RegExp("\\{" + key + "\\}", "gm"), value);
+			}
+		  }
+		  return format;
+		}
+		console.log(strFormat("我的名字叫{0}", ["strick"]));
+	</script>
+</body>
+</html>

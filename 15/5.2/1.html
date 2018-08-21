@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>15-5.2</title>
+</head>
+<body>
+	<script>
+		function loadScript(src, fn) {
+		  var script = document.createElement("script");
+		  script.src = src;
+		  document.body.appendChild(script);
+		  script.onload = function() {
+			fn.call(this);
+		  };
+		}
+		loadScript("default.js");
+	</script>
+</body>
+</html>

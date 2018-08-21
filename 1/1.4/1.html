@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>1-1.4</title>
+</head>
+<body>
+	<form id="register">
+	  <input id="txt" type="text" value="1" />
+	</form>
+	<script>
+		console.log(document.getElementById("txt").value);	//方式一
+		console.log(document.forms[0].txt.value);	//方式二
+		console.log(document.forms.register.txt.value);	//方式三
+		console.log(document.forms[0].elements[0].value);	//方式四
+	</script>
+</body>
+</html>

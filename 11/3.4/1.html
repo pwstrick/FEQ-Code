@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>11-3.4</title>
+</head>
+<body>
+	<script>
+		function digit(i) {
+			if (i == 2) {
+				i++;
+			} else if (i == 3) {
+				i += 2;
+			} else if (i == 4) {
+				++i;
+			}
+			return i;
+		}
+		for (var i = 1; i < 5; i++) {
+			console.log(digit(i));
+		}
+	</script>
+</body>
+</html>

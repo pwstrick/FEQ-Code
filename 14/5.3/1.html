@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>14-5.3</title>
+</head>
+<body>
+	<script>
+		var arr = [1, [2, [3, 4, 2], 2], 5, [6]];
+		var result = arr.toString().split(",")
+		  .map(function(value, index, array) {
+			return +value;
+		  });
+		console.log(result);
+	</script>
+</body>
+</html>

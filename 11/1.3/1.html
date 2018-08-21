@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>11-1.3</title>
+</head>
+<body>
+	<button type="button" id="btn">提交</button>
+	<script>
+	  var btn = document.getElementById("btn");
+	  function func() {
+		console.log(this);
+	  }
+	  btn.onclick = func; 			//方式一
+	  //btn.onclick = function() { 	//方式二
+		//func();
+	  //};
+	</script>
+</body>
+</html>

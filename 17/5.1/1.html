@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>17-5.1</title>
+	<style>
+	  .container {
+		width: 100px;
+		height: 100px;
+	  }
+	  #info {
+		width: 10%;
+	  }
+	</style>
+</head>
+<body>
+	<section class="container">
+	  <div id="info"></div>
+	</section>
+	<script>
+		var div = document.getElementById("info"),
+		  style = window.getComputedStyle(div);
+		console.log(style.width);
+		//IE8及以下版本
+		//console.log(div.currentStyle);
+	</script>
+</body>
+</html>

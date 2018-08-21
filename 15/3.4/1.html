@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>15-3.4</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+		var a = 1;
+		function func() {
+		  console.log(a);
+		  a = 2;
+		  console.log(this.a);
+		  var a;
+		  console.log(a);
+		}
+		func();
+	</script>
+</body>
+</html>

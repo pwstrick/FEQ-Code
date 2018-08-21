@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>6-5.1</title>
+	<style>
+		div {
+			width: 300px;
+			height: 50px;
+			color: #FFF;
+			border: 2px solid #000;
+			overflow: hidden;
+			margin-bottom: 50px;
+		}
+		div section {
+			height: inherit;
+			float: left;
+		}
+		div section:first-child {
+			width: 100px;
+		}
+		div section:last-child {
+			width: 200px;
+		}
+		.bac {
+			background:url(bac.png) repeat-y;
+			background-size: 100% 100%;
+		}
+		.padding section {
+			margin-bottom: -9999px;
+			padding-bottom: 9999px;
+		}
+		.padding section:first-child {
+			background: #F60;
+			
+		}
+		.padding section:last-child {
+			background: #FC0;
+		}
+		.border {
+			width: 200px;
+			border: 0;
+			border-left:100px solid #F60;
+			background: #FC0;
+			float: left;
+			height: inherit;
+			margin: 0;
+			padding: 0;
+		}
+		#left {
+			height: auto;
+			background: #F60;
+		}
+		#right {
+			height: auto;
+			background: #FC0;
+		}
+	</style>
+</head>
+<body>
+	<div class="bac">
+	  <section>左边的列高</section>
+	  <section></section>
+	</div>
+	<div class="padding">
+	  <section>左边的列高</section>
+	  <section></section>
+	</div>
+	<div>
+	  <fieldset class="border">
+		<section style="margin-left:-100px;">左边的列高</section>
+		<section></section>
+	  </fieldset>
+	</div>
+	<div>
+	  <section id="left">左边的列高</section>
+	  <section id="right"></section>
+	</div>
+	<script>
+	  var left = document.getElementById("left"), 	//左边列
+		right = document.getElementById("right"); 	//右边列
+	  var leftH = left.clientHeight, 	//左边列的高度
+		rightH = right.clientHeight; 	//右边列的高度
+	  //得到最大的高度值
+	  var height = (leftH >= rightH ? leftH : rightH) + "px";
+	  left.style.height = height; 		//重新定义左边列的高度
+	  right.style.height = height; 		//重新定义右边列的高度
+	</script>
+</body>
+</html>

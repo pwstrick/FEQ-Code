@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>10-2.2</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			margin-bottom: 40px;
+			color: #000;
+		}
+		.border1 {
+			border: none;
+		    /* 等效于 */
+		    /* border-width: medium;
+		    border-style: none;
+		    border-color: 前景色; */
+		}
+		.border2 {
+			border: 0;
+			/* 等效于 */
+			/* border-width: 0;
+			border-style: none;
+			border-color: 前景色; */
+		}
+	</style>
+</head>
+<body>
+	<div class="border1" style="border-style: solid"></div>
+	<div class="border2" style="border-style: solid"></div>
+</body>
+</html>

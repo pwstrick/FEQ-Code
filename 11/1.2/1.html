@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>11-1.2</title>
+	<style>
+	  .container {
+		position: relative;
+		overflow: hidden;
+		width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+		margin: 40px;
+	  }
+	  section {
+		width: 100px;
+		height: 50px;
+		color: #FFF;
+	  }
+	  .absolute {
+		position: absolute;
+		left: 120px;
+		top: 10px;
+		background: blue;
+	  }
+	  .fixed {
+		position: fixed;
+		left: 10px;
+		top: 120px;
+		background: red;
+	  }
+	</style>
+</head>
+<body>
+	<div class="container">
+	  <section class="absolute">absolute</section>
+	  <section class="fixed">fixed</section>
+	</div>
+</body>
+</html>

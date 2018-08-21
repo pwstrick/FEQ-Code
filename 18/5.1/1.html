@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>18-5.1</title>
+</head>
+<body>
+	<button type="button" id="btn">提交</button>
+	<script>
+		var btn = document.getElementById("btn");
+		btn.onclick = function(event) {
+		  event = event || window.event; 	//兼容处理
+		  event.stopPropagation();
+		  event.cancelBubble = true;
+		};
+	</script>
+</body>
+</html>

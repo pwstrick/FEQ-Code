@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>3-4.8</title>
+	<style>
+		#container {
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<button type="button" id="btn">按钮</button>
+	</div>
+	<script>
+		var btn = document.getElementById("btn"),
+			container = document.getElementById("container");
+//		container.addEventListener("click", function(event) {
+//			console.log("div");
+//			console.log(event.target, event.currentTarget);
+//		}, false);
+		btn.parentNode.addEventListener("click", function(event) {
+			console.log(event.target, event.currentTarget);
+		}, false);
+	</script>
+</body>
+</html>

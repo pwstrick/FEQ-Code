@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>6-5.3</title>
+</head>
+<body>
+	<div id="date"></div>
+	<script>
+	  var end = new Date("2020-3-12 00:00"); //截止日期
+	  function countdown() {
+		var now = new Date();
+		var day, hour, minute, second, str,
+		  remainder = end - now;
+		if (remainder < 0) {
+		  return;
+		}
+		day = Math.floor(remainder / 1000 / 60 / 60 / 24); 	//天数
+		hour = Math.floor(remainder / 1000 / 60 / 60 % 24); //小时
+		minute = Math.floor(remainder / 1000 / 60 % 60); 	//分钟
+		second = Math.floor(remainder / 1000 % 60); 		//秒数
+		str = day + "天" + hour + "时" + minute + "分" + second + "秒";
+		document.getElementById("date").innerHTML = str;
+		setTimeout(countdown, 1000);
+	  }
+	  countdown();
+	</script>
+</body>
+</html>

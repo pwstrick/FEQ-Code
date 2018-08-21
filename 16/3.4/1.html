@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>16-3.4</title>
+</head>
+<body>
+	<script>
+		var a = 1;			//全局变量
+		(function() {
+		  console.log(++a);
+		  var a = 2;
+		  console.log(++a);
+		})();
+	</script>
+</body>
+</html>

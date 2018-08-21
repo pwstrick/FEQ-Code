@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>9-3.4</title>
+</head>
+<body>
+	<script>
+		(function() {
+			var age = 1;
+			var obj = {
+				age: 10,
+				double: function() {
+					age *= 2;
+				}
+			};
+			obj.double();
+			console.log(age + obj.age);
+		})();
+	</script>
+</body>
+</html>

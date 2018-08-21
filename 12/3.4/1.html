@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>12-3.4</title>
+</head>
+<body>
+	<script>
+		function add() {
+			var number = 0;
+			return function() {
+				console.log(number++);
+			};
+		}
+		var func1 = add(),
+				func2 = add();
+		func1();
+		func1();
+		func2();
+	</script>
+</body>
+</html>

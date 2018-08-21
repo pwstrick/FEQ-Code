@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>6-5.4</title>
+</head>
+<body>
+	<select id="name">
+		<option value="1">strick</option>
+		<option value="2" selected>jane</option>
+		<option value="3">freedom</option>
+		<option value="4">kevin</option>
+	</select>
+	<script src="../../assets/js/jquery.js"></script>
+	<script>
+		console.log($("#name").val());		//第一种
+		console.log($("#name").find("option:selected").val());//第二种
+		var index = $("#name").get(0).selectedIndex;//第三种
+		console.log($("#name").find("option:eq("+index+")").val());
+	</script>
+</body>
+</html>
