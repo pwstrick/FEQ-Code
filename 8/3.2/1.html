@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>8-3.2</title>
+</head>
+<body>
+	<script>
+		var numberObj = {
+		  valueOf: function() {
+			return {};
+		  },
+		  toString: function() {
+			return "10";
+		  }
+		};
+		console.log(Number(numberObj));
+	</script>
+</body>
+</html>

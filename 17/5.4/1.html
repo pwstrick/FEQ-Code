@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>17-5.4</title>
+</head>
+<body>
+	<script>
+		var arr = [1, 2, 2, 3, 4, 4, 5];
+		function duplicate(arr) {
+		  var result = [];
+			length = arr.length;
+		  arr.forEach(function(value, index) {
+			if(arr.indexOf(value) != arr.lastIndexOf(value) 
+				&& result.indexOf(value) == -1) {
+			  result.push(value);
+			}
+		  });
+		  return result;
+		}
+		console.log(duplicate(arr));
+	</script>
+</body>
+</html>

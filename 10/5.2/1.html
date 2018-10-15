@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>10-5.2</title>
+</head>
+<body>
+	<script>
+		var str = "get-element-by-id";
+		var result = str.replace(/-([a-z])/g, function(match, p1, index, input) {
+		  return p1.toUpperCase();
+		});
+		console.log(result);
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>18-4.8</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+	<script>
+		function resize() {
+			var designWidth = 640,
+					baseSize = 100,
+					html = document.documentElement;
+			console.log(window.innerWidth)
+			html.style.fontSize = window.innerWidth * baseSize / designWidth + "px";
+		}
+		resize();
+		document.addEventListener("DOMContentLoaded", function() {
+			resize();
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>

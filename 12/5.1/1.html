@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>12-5.1</title>
+	<style>
+		.container {
+			width: 200px;
+			border: 1px solid #000;
+			margin: 50px;
+			position: relative;
+			overflow: hidden;
+			text-align: center;
+			padding: 5px;
+		}
+		.float {
+		  float: left;
+		  position: relative;
+		  left: 50%;
+		}
+		.bac {
+			background: #F60;
+		    width: 40px;
+		    height: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+	  <div class="float">
+		<section style="position:relative; left:-50%" class="bac"></section>
+	  </div>
+	</div>
+	
+	<div class="container">
+	  <div class="float bac" style="transform:translateX(-50%)"></div>
+	</div>
+</body>
+</html>

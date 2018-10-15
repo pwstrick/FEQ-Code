@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>9-4.3</title>
+	<style>
+		/* 匹配第一个span元素 */
+		div :first-child { 
+			color: blue;
+		}
+		/* 匹配第一个p元素 */
+		div p:first-of-type { 
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	  <span>第一个span元素</span>
+	  <p>第一个p元素</p>
+	  <p>第二个p元素</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>20-5.2</title>
+</head>
+<body>
+	<script>
+		function handle() {
+		  console.log("回调函数");
+		}
+		var script = document.createElement("script");
+		script.src = "jsonp.php?jsonp=handle"; 	//传递回调函数的名称
+		document.body.appendChild(script);
+	</script>
+</body>
+</html>

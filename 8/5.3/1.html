@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>8-5.3</title>
+</head>
+<body>
+	<script>
+		function thousandBitSeparator(num) {
+		  return num.toString().replace(/(\d)(?=(\d{3})+$)/g, function(match) {
+			return match + ",";
+		  });
+		}
+		console.log(thousandBitSeparator(2018));
+		console.log(thousandBitSeparator(100));
+		console.log(thousandBitSeparator(1234567));
+	</script>
+</body>
+</html>

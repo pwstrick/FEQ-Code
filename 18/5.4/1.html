@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>18-5.4</title>
+</head>
+<body>
+	<script>
+		var arr = [1, 2, 2, 3, 4, 4, 5];
+		function difference(arr) {
+		  var max = Math.max.apply(this, arr);  
+		  var min = Math.min.apply(this, arr);
+		  return max - min;
+		}
+		console.log(difference(arr));
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>3-5.4</title>
+</head>
+<body>
+	<div id="container">
+		<a href="#" data-digit="1">按钮</a>
+	</div>
+	<script>
+		var container = document.getElementById("container");
+		container.addEventListener("click", function(event) {
+			var element = event.target;
+			if(element.tagName.toLowerCase() != "a") {
+				return;
+			}
+			alert(element.dataset.digit + element.innerHTML);
+		}, false);
+	</script>
+</body>
+</html>

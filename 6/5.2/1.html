@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>6-5.2</title>
+</head>
+<body>
+	<script>
+		var obj = {
+			"name": "strick",
+			"age": 30
+		};
+		function deepCopy(obj) {
+		  return JSON.parse(JSON.stringify(obj));
+		}
+		console.log(deepCopy(obj));
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>11-4.7</title>
+</head>
+<body>
+	<script>
+		eval(1); 	//1
+		var str = "var total=100;console.log(total)";
+		//eval(str);	//100
+		
+		function sum() {
+		  var digit = 1;
+		  //console.log(total); 		//抛出未定义的异常
+		  eval("var total=100;"); 	//定义变量
+		  console.log(total); 		//total和digit的作用域相同
+		}
+		sum();
+		
+		function sum2() {
+		  "use strict";
+		  eval("var total=100;"); 	//定义变量
+		  //console.log(total); 		//抛出未定义的异常
+		}
+		sum2();
+	</script>
+</body>
+</html>

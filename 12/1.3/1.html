@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>12-1.3</title>
+</head>
+<body>
+	<script>
+		name = "freedom";	//全局变量
+		var obj = {
+		  name: "strick",
+		  func: function() {
+			var self = this;
+			console.log(this.name);
+			(function() {
+			  console.log(this.name);
+			  console.log(self.name);
+			})();
+		  }
+		};
+		obj.func();
+	</script>
+</body>
+</html>

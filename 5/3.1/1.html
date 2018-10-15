@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>5-3.1</title>
+	<style>
+	  ul {
+		counter-reset: digit;
+	  }
+	  ul li::before {
+		counter-increment: digit;
+		content: counter(digit) "）";
+	  }
+	</style>
+</head>
+<body>
+	<ul>
+	  <li>HTML</li>
+	  <li>CSS</li>
+	  <li>JavaScript</li>
+	</ul>
+</body>
+</html>

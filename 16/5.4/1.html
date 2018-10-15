@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>16-5.4</title>
+</head>
+<body>
+	<script>
+		Number.prototype.add = function (num) {
+			return this + num;
+		};
+		Number.prototype.minus = function (num) {
+			return this - num;
+		};
+		console.log((1).add(2).minus(3));
+	</script>
+</body>
+</html>

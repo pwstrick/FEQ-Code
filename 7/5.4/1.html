@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>7-5.4</title>
+</head>
+<body>
+	<script>
+		function swap1(a , b) {
+			a = a + b;
+			b = a - b;
+			a = a - b;
+			console.log(a, b);
+		}
+		swap1(1, 2);
+
+		function swap2(a, b) {
+			a ^= b;
+			b ^= a;
+			a ^= b;
+			console.log(a, b);
+		}
+		swap2(1, 2);
+
+		function swap3(a, b) {
+			a = [b,b=a][0];
+			console.log(a, b);
+		}
+		swap3(1, 2);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>13-3.4</title>
+</head>
+<body>
+	<script>
+		function outer() {
+			console.log(a);
+			var a = 1;
+			console.log(inner());
+			function inner() {
+				return a;
+			}
+		}
+		outer();
+
+//		function outer() {
+//			function inner() {
+//				return a;
+//			}
+//			var a;
+//			console.log(a);
+//			a = 1;
+//			console.log(inner());
+//		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>8-3.4</title>
+</head>
+<body>
+	<script>
+		function outer() {
+			var a = 1;
+			double = function() {
+				this.a *= 2;
+				console.log(this.a);
+			};
+			function inner() {
+				console.log(a);
+			}
+			return inner;
+		}
+		var result = outer();
+		result();
+		double();
+		result();
+	</script>
+</body>
+</html>

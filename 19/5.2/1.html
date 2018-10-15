@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>19-5.2</title>
+</head>
+<body>
+	<script>
+		//用构造函数XMLHttpRequest()创建XHR对象
+		var xhr = new XMLHttpRequest();
+		//监听XHR对象上的readystatechange事件
+		xhr.onreadystatechange = function() {
+		  if (xhr.readyState == 4) {
+			if (xhr.status == 200) {
+			  console.log("success");
+			}
+		  }
+		};
+		//指定请求的方法和URL
+		xhr.open("post", "server.php", true);
+		//指定请求首部
+		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlcoded");
+		//传递FormData类型的数据
+		var data = new FormData();
+		data.append("id", 1);
+		data.append("name", "strick");
+		xhr.send(data);
+	</script>
+</body>
+</html>

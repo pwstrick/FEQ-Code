@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>13-5.3</title>
+</head>
+<body>
+	<ul id="container">
+	  <li>
+		<span id="txt"></span>
+		<span></span>
+	  </li>
+	</ul>
+	<span id="name"></span>
+	<script>
+		function isPosterity(ancestor, element) {
+		  while (element) {
+			if (element == ancestor) return true;
+			element = element.parentNode;
+		  }
+		  return false;
+		}
+		var ancestor = document.getElementById("container"),
+			child = document.getElementById("txt"),
+			name = document.getElementById("name");
+		console.log(isPosterity(ancestor, child));
+		console.log(isPosterity(ancestor, name));
+	</script>
+</body>
+</html>

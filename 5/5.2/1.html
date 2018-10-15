@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>5-5.2</title>
+</head>
+<body>
+	<script>
+		function Super(age) {
+		  this.names = [];
+		  this.age = age;
+		}
+		function Sub(age) {
+		}
+		Sub.prototype = Super.prototype;
+		
+		//改进
+		function Sub(age) {
+		  Super.call(this, age);
+		}
+		Sub.prototype.getShool = function() {
+		  return "university";
+		};
+		var parent = new Super(30);
+		console.log(parent.getShool()); //"university"
+		
+		function create(object) {
+		  function F() {}
+		  F.prototype = object;
+		  return new F();
+		}
+		Sub.prototype = create(Super.prototype);
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>15-5.4</title>
+</head>
+<body>
+	<script>
+		var arr = [1, 2, 2, 3, 4, 4, 5, "1", "1"];
+		function distinct(arr) {
+		  var obj = {},		//空对象
+			result = [],	//空数组
+			length = arr.length;
+		  arr.forEach(function(value, index) {
+			if(!obj[value]) {
+			  obj[value] = true;
+			  result.push(value);
+			}else if(result.indexOf(value) == -1) {
+			  result.push(value);
+			}
+		  });
+		  return result;
+		}
+		console.log(distinct(arr));
+	</script>
+</body>
+</html>

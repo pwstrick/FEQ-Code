@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>18-4.7</title>
+</head>
+<body>
+	<div id="container"></div>
+	<script>
+		//将两个参数拼接后输出
+		document.write("<p>strick</p>");
+		document.write("<p>freedom</p>");
+		//将两段HTML字符串拼接后输出
+		var container = document.getElementById("container");
+		container.innerHTML += "<p>strick</p>";
+		container.innerHTML += "<p>freedom</p>";
+		window.onload = function() {
+		  document.write("freedom");
+		};
+	</script>
+</body>
+</html>

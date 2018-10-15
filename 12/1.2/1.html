@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>12-1.2</title>
+	<style>
+		  div {
+			width: 100px;
+			height: 100px;
+			position: relative;
+		  }
+		  section {
+			width: inherit;
+			height: inherit;
+			position: absolute;
+		  }
+		.zindex1 {
+		  background: blue;
+		  z-index: auto;
+		}
+		.zindex2 {
+		  background: red;
+		  z-index: -1;
+		}
+		.zindex3 {
+		  background: black;
+		  z-index: 0;
+		}
+		.zindex4 {
+		  background: yellow;
+		  z-index: 1;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	  <section class="zindex1"></section>
+	  <section class="zindex2"></section>
+	  <section class="zindex3"></section>
+	  <section class="zindex4"></section>
+	</div>
+</body>
+</html>

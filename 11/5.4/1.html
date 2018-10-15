@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>11-5.4</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+		function sizeof(str) {
+			var length = str.length,
+					total = 0,
+					code;
+			for (var i = 0; i < length; i++) {
+				code = str.charCodeAt(i);
+				if (code <= 0x007f) total += 1;
+				else if (code <= 0x07ff) total += 2;
+				else if (code <= 0xffff) total += 3;
+				else total += 4;
+			}
+			return total;
+		}
+		console.log(sizeof("a"));
+		console.log(sizeof("平"));
+	</script>
+</body>
+</html>

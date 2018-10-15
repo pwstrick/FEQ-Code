@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>13-5.4</title>
+	<style>
+		div {
+		  margin: 100px 0;		
+		  width: 100px;
+		  height: 100px;
+		  background: #f60;
+		}
+		div {
+		  animation: drift 3s 2 alternate;
+		}
+		@keyframes drift {
+		  from {
+			transform: translateX(0) scale(1);
+		  }
+		  to {
+			transform: translateX(100px) scale(1.5);
+		  }
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

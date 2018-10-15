@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>14-5.4</title>
+</head>
+<body>
+	<script>
+		var arr = [1, 2, 3, 4, 5, 6]; 
+		function binarySearch(target, arr) {
+		  var start = 0,				//起始位置
+			end = arr.length - 1,	//结束位置
+			middle,
+			element;
+		  while (start <= end) {
+			middle = Math.floor((start + end) / 2);	//向下取整
+			element = arr[middle];					//中间位置的元素
+			if (target == element) return middle;
+			else if (target > element) start = middle + 1;
+			else end = middle - 1;
+		  }
+		  return -1;
+		}
+		console.log(binarySearch(1, arr));
+		console.log(binarySearch(2, arr));
+		console.log(binarySearch(3, arr));
+		console.log(binarySearch(4, arr));
+		console.log(binarySearch(5, arr));
+		console.log(binarySearch(6, arr));
+		console.log(binarySearch(7, arr));
+	</script>
+</body>
+</html>

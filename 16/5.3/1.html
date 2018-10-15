@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>16-5.3</title>
+</head>
+<body>
+	<div id="info"></div>
+	<script>
+		var div = document.getElementById("info");
+		//方式一
+		//div.style.fontSize = "18px";
+		//div.style.width = "100px";
+		//方式二
+		//div.style.cssText = "font-size:18px;width:100px";
+		//方式三
+		div.setAttribute("style", "font-size:18px;width:100px");
+	</script>
+</body>
+</html>

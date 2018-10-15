@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>20-2.3</title>
+</head>
+<body>
+	<input type="radio" name="gender" value="1" checked/>
+	<input type="radio" name="gender" value="2" />
+	<script src="../../assets/js/jquery.js"></script>
+	<script>
+		console.log($(":radio:checked").val());
+		console.log($("[name=gender]:checked").val());
+	</script>
+</body>
+</html>
